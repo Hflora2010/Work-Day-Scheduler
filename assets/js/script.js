@@ -1,4 +1,3 @@
-var dayDisplayEl = $("#day-display");
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -10,8 +9,41 @@ var dayDisplayEl = $("#day-display");
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
+
+  $(document).ready(function () {
+    var dayDisplayEl = $("#day-display");
+    var saveBtn = $(".saveBtn");
+    
+    $(saveBtn).on("click", function () {
+    //referencing the specific button for the specific area
+    var input = $(this).siblings(".description").val();
+    // console.log(input)
+    var hour = $(this).parent().attr("id");
+    // console.log(hour);
+      localStorage.setItem(hour,input);
+  })
+
+    function displayDay() {
+      var currentDay = dayjs().format("dddd, MMMM D YYYY");
+      dayDisplayEl.text(currentDay);
+    }
+    
+  displayDay();
+  })
+  // console.log(saveBtn, "hello")
+  
+  // (function(event)); 
+  // {
+  // $(this).userToDo
+  // localStorage.setItem(userToDo.val);
+  // })
+
   //
   // TODO: Add code to apply the past, present, or future class to each time
+
+  //select all time slots $(time-block) time slot hour to your current dayjs hour. conditional statements to check what time it is.
+
+
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
@@ -21,11 +53,7 @@ var dayDisplayEl = $("#day-display");
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
-  function displayDay() {
-    var currentDay = dayjs().format("dddd, MMMM D YYYY");
-    dayDisplayEl.text(currentDay);
-  }
-// })
 
-displayDay();
+
+  //This function displays the current day
+
