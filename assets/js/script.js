@@ -42,13 +42,19 @@
     
     //past
     if (hour < currentTime)
-    $(this).setAttribute("style", "background: gray");
+    $(".time-block").removeClass ("present");
+    $(".time-block").removeClass("future");
+    // $(this).setAttribute("style", "background: gray");
     //present
     if (hour === currentTime)
-    $(this).setAttribute("style", "background: red");
+    $(".time-block").removeClass("past");
+    $(".time-block").removeClass("future");
+    // $(this).setAttribute("style", "background: red");
     //future
     if (hour > currentTime)
-    $(this).setAttribute("style", "background: green");
+    $(".time-block").removeClass("past");
+    $(".time-block").removeClass("present");
+    // $(this).setAttribute("style", "background: green");
   }
 
   //Getting items from local storage to save on the refresh.
