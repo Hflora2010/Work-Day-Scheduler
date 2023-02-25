@@ -13,21 +13,37 @@
   $(document).ready(function () {
     var dayDisplayEl = $("#day-display");
     var saveBtn = $(".saveBtn");
+
+
+  //   function saveInputOnRefresh() {
+  //     var tasks = localStorage.getItem(hour,input);
+  //     if (tasks) {
+  //       tasks = JSON.parse(tasks)
+  //     } else {
+  //       tasks = [];
+  //     }
+  //     return tasks;
+  //     }
+  //     return localStorage.getItem(hour,input);
+
+  // }
     
+
     $(saveBtn).on("click", function () {
-    //referencing the specific button for the specific area
+    //referencing the specific button for the specific textarea
     var input = $(this).siblings(".description").val();
     // console.log(input)
     var hour = $(this).parent().attr("id");
     // console.log(hour);
       localStorage.setItem(hour,input);
+    ("description").val() = localStorage.getItem(input);
   })
 
     function displayDay() {
       var currentDay = dayjs().format("dddd, MMMM D YYYY");
       dayDisplayEl.text(currentDay);
     }
-    
+
   displayDay();
   })
   // console.log(saveBtn, "hello")
