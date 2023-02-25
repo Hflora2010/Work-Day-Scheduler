@@ -41,19 +41,20 @@
     var currentTime = dayjs().format("hh:m:s a");
     
     //past
-    if (hour < currentTime)
+    if (hour < currentTime) {
     $(".time-block").removeClass ("present");
     $(".time-block").removeClass("future");
     // $(this).setAttribute("style", "background: gray");
     //present
-    if (hour === currentTime)
+    } if (hour === currentTime) {
     $(".time-block").removeClass("past");
     $(".time-block").removeClass("future");
     // $(this).setAttribute("style", "background: red");
     //future
-    if (hour > currentTime)
+    } else (hour > currentTime) {
     $(".time-block").removeClass("past");
     $(".time-block").removeClass("present");
+    }
     // $(this).setAttribute("style", "background: green");
   }
 
