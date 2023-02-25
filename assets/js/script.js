@@ -25,12 +25,31 @@
   })
 
     function displayDay() {
-      var currentDay = dayjs().format("dddd, MMMM D YYYY");
+      var currentDay = dayjs().format("dddd, MMMM D YYYY hh:m a");
       dayDisplayEl.text(currentDay);
     }
 
+    // function currentTime() {
+    //   var time = dayjs.format("hh:m:s");
+    //   if ()
+    // }
+
   displayDay();
   })
+
+  function nowTime() {
+    var currentTime = dayjs().format("hh:m:s a");
+    
+    //past
+    if (hour < currentTime)
+    $(this).setAttribute("style", "background: gray");
+    //present
+    if (hour === currentTime)
+    $(this).setAttribute("style", "background: red");
+    //future
+    if (hour > currentTime)
+    $(this).setAttribute("style", "background: green");
+  }
 
   //Getting items from local storage to save on the refresh.
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
