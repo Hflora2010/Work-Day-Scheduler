@@ -23,7 +23,7 @@
     // console.log(hour);
       localStorage.setItem(hour,input);
   })
-
+      //This function displays the current day
     function displayDay() {
       var currentDay = dayjs().format("dddd, MMMM D YYYY hh:m a");
       dayDisplayEl.text(currentDay);
@@ -39,7 +39,7 @@
 
   $(".time-block").each(function() {
     var currentTime = dayjs().format("hh:m:s a");
-    var scheduleHour = 
+    var scheduleHour = parseInt(".time-block").val
     
     //past
     if (scheduleHour < currentTime) {
@@ -86,5 +86,5 @@
   //
 
 
-  //This function displays the current day
+
 
