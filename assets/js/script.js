@@ -37,26 +37,27 @@
   displayDay();
   })
 
-  function nowTime() {
+  $(".time-block").each(function() {
     var currentTime = dayjs().format("hh:m:s a");
+    var scheduleHour = 
     
     //past
-    if (hour < currentTime) {
+    if (scheduleHour < currentTime) {
     $(".time-block").removeClass ("present");
     $(".time-block").removeClass("future");
     // $(this).setAttribute("style", "background: gray");
     //present
-    } if (hour === currentTime) {
+    } if (scheduleHour === currentTime) {
     $(".time-block").removeClass("past");
     $(".time-block").removeClass("future");
     // $(this).setAttribute("style", "background: red");
     //future
-    } else (hour > currentTime) {
+    } else (scheduleHour > currentTime) {
     $(".time-block").removeClass("past");
     $(".time-block").removeClass("present");
     }
+  })
     // $(this).setAttribute("style", "background: green");
-  }
 
   //Getting items from local storage to save on the refresh.
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
