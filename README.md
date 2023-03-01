@@ -18,9 +18,15 @@ Below is a screenshot of the website you will access with the link above:
 
 ![Alt text](./assets/css/images/Work-Day-Scheduler%20Screen%20Shot%202023-02-28%20at%2010.04.19%20PM.png "Screen-Shot")
 
+## Credits
+
+Code was talked through with tutor, Omar Carmona and AskBCS Learning Assistants.
+
 ## References
+<a href="https://day.js.org/docs/en/display/format">day.js</a><br>
 <a href="https://www.w3schools.com/jquery/jquery_ref_traversing.asp"> JQuery Transversing Methods</a><br>
 <a href="https://www.w3schools.com/jquery/traversing_siblings.asp">JQuery Siblings()</a><br>
 <a href="https://www.w3schools.com/jquery/traversing_parents.asp">JQuery Parents()</a><br>
 <a href="https://www.coderscampus.com/complete-beginners-guide-jquery/">JQuery Basics with Examples</a><br>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt</a><br>
+<a href="https://api.jquery.com/each/">.each()</a>
