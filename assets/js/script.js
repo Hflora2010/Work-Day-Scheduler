@@ -19,7 +19,8 @@ $(document).ready(function () {
     dayDisplayEl.text(currentDay);
   }
 
-  // askBCS helped me to formulate this function by using .moment(). Comparing the schedule hour to the current hour with moment. 
+  // askBCS helped me to formulate this function by using .moment(). Comparing the schedule hour to the current hour with moment.
+  //on resubmit my Tutor Brandon Rose helped me to work out the kinks with dayjs to help this run fully. 
   function hourUpdater() {
     var currentHour = dayjs().hour();
 
