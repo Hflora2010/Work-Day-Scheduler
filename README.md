@@ -16,7 +16,7 @@ Below is a link to my deployed JavaScript Code Quiz: <br>
 <br>
 Below is a screenshot of the website you will access with the link above:
 
-![Alt text](/assets/css/images/Quiz%20Screen-Shot.png "Screen-Shot")
+![Alt text](./assets/css/images/Work-Day-Scheduler%20Screen%20Shot%202023-02-28%20at%2010.04.19%20PM.png "Screen-Shot")
 
 ## References
 <a href="https://www.w3schools.com/jquery/jquery_ref_traversing.asp"> JQuery Transversing Methods</a><br>
