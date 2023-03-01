@@ -10,7 +10,7 @@ To use: <br>
 3. Click save on the right hand side of the time-block you have modified. <br>
 4. It will save all of your inputs, even when refreshing the page. <br>
 
-Below is a link to my deployed JavaScript Code Quiz: <br>
+Below is a link to my deployed Work Day Scheduler: <br>
 <a href="https://hflora2010.github.io/Work-Day-Scheduler/">Work Day Scheduler</a>
 <br>
 <br>
@@ -20,7 +20,12 @@ Below is a screenshot of the website you will access with the link above:
 
 ## Credits
 
-Code was talked through with tutor, Omar Carmona and AskBCS Learning Assistants.
+Starter code was provided by: 
+Georgeyoo<br>
+Mfyke<br>
+Cmathena2u
+
+Modified code was talked through with tutor, Omar Carmona and AskBCS Learning Assistants.
 
 ## References
 <a href="https://day.js.org/docs/en/display/format">day.js</a><br>
