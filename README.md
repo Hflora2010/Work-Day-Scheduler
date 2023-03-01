@@ -20,12 +20,12 @@ Below is a screenshot of the website you will access with the link above:
 
 ## Credits
 
-Starter code was provided by: 
+Starter code was provided by:<br> 
 Georgeyoo<br>
 Mfyke<br>
 Cmathena2u
 
-Modified code was talked through with tutor, Omar Carmona and AskBCS Learning Assistants.
+Modified code was talked through with tutor, Omar Carmona, Brandon Rose and AskBCS Learning Assistants.
 
 ## References
 <a href="https://day.js.org/docs/en/display/format">day.js</a><br>
