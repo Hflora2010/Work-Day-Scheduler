@@ -1,6 +1,7 @@
 
 //wrapping code in document.ready so the code doesn't run until browser has finished rendering all items.
 $(document).ready(function () {
+  hourUpdater();
   var dayDisplayEl = $("#day-display");
   var saveBtn = $(".saveBtn");
 
@@ -20,7 +21,7 @@ $(document).ready(function () {
 
   // askBCS helped me to formulate this function by using .moment(). Comparing the schedule hour to the current hour with moment. 
   function hourUpdater() {
-    var currentHour = moment().hours();
+    var currentHour = dayjs().hour();
 
   //making the schedule hour a number so it can be compared to the current hour number.
     $(".time-block").each(function () {
@@ -28,23 +29,27 @@ $(document).ready(function () {
         $(this)
           .attr("id")
       );
-  
+        
       //past
-      if (scheduleHour < currentHour) {
+      if (currentHour > scheduleHour) {
+        $(this).removeClass('present');
+        $(this).removeClass('future');
         $(this).addClass("past");
   
         //present
-      } else if (scheduleHour === currentHour) {
-        // $(this).removeClass("past");
-        $(this).addClass(".present");
+      } else if (scheduleHour == currentHour) {
+        $(this).removeClass('past');
+        $(this).removeClass('future');
+        $(this).addClass("present");
   
         //future
-      } else (scheduleHour > currentHour); {
-        $(this).addClass(".future");
+      } else if (currentHour < scheduleHour) {
+        $(this).removeClass('past');
+        $(this).removeClass('present');
+        $(this).addClass("future");
       }
     });
   }
-  hourUpdater();
 
   displayDay();
 });
